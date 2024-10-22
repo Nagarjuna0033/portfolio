@@ -75,8 +75,12 @@ export default function Navbar({ mode, toggleColorMode }) {
           </Box>
           <Box sx={{ display: "flex", gap: 5 }}>
             <Box sx={{ display: { xs: "none", md: "flex", gap: 25 } }}>
-              <Button sx={styleLinks}>Home</Button>
-              <Button sx={styleLinks}>About</Button>
+              <Link to="/portfolio">
+                <Button sx={styleLinks}>Home</Button>
+              </Link>
+              <Link to="/portfolio/About">
+                <Button sx={styleLinks}>About</Button>
+              </Link>
               <Button sx={styleLinks}>Projects</Button>
               <Button sx={styleLinks}>Resume</Button>
               <Button style={{ backgroundColor: "#4876EE" }}>

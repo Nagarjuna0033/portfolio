@@ -5,7 +5,8 @@ import Navbar from "./components/Shared/Navbar";
 import Footer from "./components/Shared/Footer";
 import getMPTheme from "./components/theme/getMPTheme";
 import Home from "./components/Home/Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import About from "./components/About/About";
 // import TemplateFrame from "./components/TemplateFrame";
 
 export default function App() {
@@ -52,7 +53,9 @@ export default function App() {
       <Navbar mode={mode} toggleColorMode={toggleColorMode} />
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/portfolio" />} />
+          <Route path="/portfolio" element={<Home />} />
+          <Route path="/portfolio/About" element={<About />} />
         </Routes>
       </div>
       <Footer />
