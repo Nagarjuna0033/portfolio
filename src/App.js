@@ -7,9 +7,21 @@ import getMPTheme from "./components/theme/getMPTheme";
 import Home from "./components/Home/Home";
 import { Routes, Route, Navigate } from "react-router-dom";
 import About from "./components/About/About";
+import Resume from "./components/Resume/Resume";
+import PreLoader from "./components/Shared/Pre";
+import ScrollToTop from "./components/Shared/ScrollToTop";
 // import TemplateFrame from "./components/TemplateFrame";
 
 export default function App() {
+  const [load, upadateLoad] = React.useState(true);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
   const [mode, setMode] = React.useState("dark"); // default mode is dark
   // const [showCustomTheme, setShowCustomTheme] = React.useState(true); // default theme is custom
   const MPTheme = createTheme(getMPTheme(mode));
@@ -51,11 +63,14 @@ export default function App() {
     <ThemeProvider theme={MPTheme}>
       <CssBaseline enableColorScheme />
       <Navbar mode={mode} toggleColorMode={toggleColorMode} />
+      <PreLoader load={load} />
+      <ScrollToTop />
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/portfolio" />} />
           <Route path="/portfolio" element={<Home />} />
           <Route path="/portfolio/About" element={<About />} />
+          <Route path="/portfolio/Resume" element={<Resume />} />
         </Routes>
       </div>
       <Footer />

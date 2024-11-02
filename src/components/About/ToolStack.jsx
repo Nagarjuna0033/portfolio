@@ -11,12 +11,12 @@ import {
 export default function Toolstack() {
   const style = {
     border: "2px solid #4876EE",
-    padding: "3rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    height: "220px",
-    width: "250px",
+    justifyContent: "center",
+    height: "200px",
+    width: "200px",
     textAlign: "center",
   };
   const textStyle = {
@@ -33,7 +33,7 @@ export default function Toolstack() {
             label: "Visual Studio code",
           },
           {
-            icon: <SiPostman size="2.5rem" />,
+            icon: <SiPostman size="3rem" />,
             label: "Postman",
           },
           { icon: <SiSlack size="3rem" />, label: "Slack" },

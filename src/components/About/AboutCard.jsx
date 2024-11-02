@@ -31,7 +31,7 @@ export default function AboutCard() {
             <br />
             <span>
               I am currently studying B.Tech 3rd year at Rajiv Gandhi University
-              of knowledge and Technologies Juspay.
+              of knowledge and Technologies.
             </span>
             <br />
             <br />

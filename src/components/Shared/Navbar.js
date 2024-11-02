@@ -12,7 +12,7 @@ import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import ToggleColorMode from "./ToggleColorMode";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -30,10 +30,14 @@ const styleLinks = {
   fontSize: "1rem",
   fontFamily: "arial",
 };
+const LinkStyles = {
+  textDecoration: "none",
+  color: "white",
+};
 
 export default function Navbar({ mode, toggleColorMode }) {
   const [open, setOpen] = React.useState(false);
-
+  const location = useLocation();
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
@@ -81,8 +85,12 @@ export default function Navbar({ mode, toggleColorMode }) {
               <Link to="/portfolio/About">
                 <Button sx={styleLinks}>About</Button>
               </Link>
-              <Button sx={styleLinks}>Projects</Button>
-              <Button sx={styleLinks}>Resume</Button>
+              <Link to="/portfolio/About">
+                <Button sx={styleLinks}>Projects</Button>
+              </Link>
+              <Link to="/portfolio/Resume">
+                <Button sx={styleLinks}>Resume</Button>
+              </Link>
               <Button style={{ backgroundColor: "#4876EE" }}>
                 <a
                   href="https://github.com/nagarjuna0033/Portfolio"
@@ -142,10 +150,66 @@ export default function Navbar({ mode, toggleColorMode }) {
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>Home</MenuItem>
-                <MenuItem>About</MenuItem>
-                <MenuItem>Projects</MenuItem>
-                <MenuItem>Resume</MenuItem>
+                <Link
+                  to="/portfolio"
+                  style={LinkStyles}
+                  onClick={toggleDrawer(false)}
+                >
+                  <MenuItem
+                    sx={
+                      location.pathname === "/portfolio"
+                        ? { backgroundColor: "#4876EE" }
+                        : {}
+                    }
+                  >
+                    Home
+                  </MenuItem>
+                </Link>
+                <Link
+                  to="/portfolio/About"
+                  style={LinkStyles}
+                  onClick={toggleDrawer(false)}
+                >
+                  <MenuItem
+                    sx={
+                      location.pathname === "/portfolio/About"
+                        ? { backgroundColor: "#4876EE" }
+                        : {}
+                    }
+                  >
+                    About
+                  </MenuItem>
+                </Link>
+                <Link
+                  to="/portfolio/About"
+                  style={LinkStyles}
+                  onClick={toggleDrawer(false)}
+                >
+                  <MenuItem
+                    sx={
+                      location.pathname === "/portfolio/Projects"
+                        ? { backgroundColor: "#4876EE" }
+                        : {}
+                    }
+                  >
+                    Projects
+                  </MenuItem>
+                </Link>
+                <Link
+                  to="/portfolio/Resume"
+                  style={LinkStyles}
+                  onClick={toggleDrawer(false)}
+                >
+                  <MenuItem
+                    sx={
+                      location.pathname === "/portfolio/Resume"
+                        ? { backgroundColor: "#4876EE" }
+                        : {}
+                    }
+                  >
+                    Resume
+                  </MenuItem>
+                </Link>
               </Box>
             </Drawer>
           </Box>

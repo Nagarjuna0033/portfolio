@@ -15,12 +15,12 @@ import {
 export default function Techstack() {
   const style = {
     border: "2px solid #4876EE",
-    padding: "3rem",
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
     alignItems: "center",
-    height: "220px",
-    width: "250px",
+    height: "200px",
+    width: "200px",
     textAlign: "center",
   };
   const textStyle = {

@@ -4,6 +4,7 @@ import Techstack from "./TechStack";
 import AboutCard from "./AboutCard";
 import Toolstack from "./ToolStack";
 import laptop from "../assets/laptop_asset.png";
+import Github from "./Github";
 export default function About() {
   return (
     <Container
@@ -95,7 +96,7 @@ export default function About() {
             <strong className="purple">Tools</strong> I use
           </Typography>
           <Toolstack />
-          {/* <Github /> */}
+          <Github />
         </Grid2>
       </Stack>
     </Container>
