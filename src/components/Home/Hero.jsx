@@ -48,13 +48,7 @@ export default function Hero() {
               fontFamily: "arial",
             }}
           >
-            Hi&nbsp;There!&nbsp;
-            <img
-              src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif"
-              width="30px"
-              height="60px"
-              alt="hello"
-            />
+            Hi&nbsp;There!&nbsp;👋
           </Typography>
           <Typography
             sx={{

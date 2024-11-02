@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container } from "@mui/material";
 import { Document, Page, pdfjs } from "react-pdf";
-import Particle from "../Shared/Particles";
 import pdf from "../assets/Nagarjuna-Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -26,9 +25,7 @@ export default function Resume() {
 
   return (
     <Box sx={{ flexGrow: 1, p: { xs: 1, sm: 2, md: 3 }, marginTop: "5rem" }}>
-      <Container maxWidth="lg" className="resume-section">
-        <Particle />
-
+      <Container maxWidth="lg">
         <Box display="flex" justifyContent="center" mt={3} mb={3}>
           <Button
             variant="contained"
