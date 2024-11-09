@@ -1,6 +1,8 @@
 import React from "react";
 import { Container } from "@mui/material";
 import GitHubCalendar from "react-github-calendar";
+import { GithubContributions } from "react-github-graph";
+
 export default function Github() {
   return (
     <div>
@@ -16,10 +18,7 @@ export default function Github() {
         <h1 style={{ paddingBottom: "20px", fontFamily: "arial" }}>
           Days I <strong style={{ color: "#4876EE" }}>Code</strong>
         </h1>
-        <GitHubCalendar
-          username="nagarjuna0033"
-          style={{ fontFamily: "arial" }}
-        />
+        <GithubContributions username="Nagarjuna0033" />
       </Container>
     </div>
   );

@@ -10,6 +10,7 @@ import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import PreLoader from "./components/Shared/Pre";
 import ScrollToTop from "./components/Shared/ScrollToTop";
+import Projects from "./components/Projects/Projects";
 // import TemplateFrame from "./components/TemplateFrame";
 
 export default function App() {
@@ -70,6 +71,7 @@ export default function App() {
           <Route path="/" element={<Navigate to="/portfolio" />} />
           <Route path="/portfolio" element={<Home />} />
           <Route path="/portfolio/About" element={<About />} />
+          <Route path="/portfolio/Projects" element={<Projects />} />
           <Route path="/portfolio/Resume" element={<Resume />} />
         </Routes>
       </div>

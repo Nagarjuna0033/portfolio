@@ -59,6 +59,7 @@ export default function About() {
               src={laptop}
               alt="about"
               style={{
+                filter: "hue-rotate(300deg)",
                 width: "100%",
                 height: "auto",
                 maxWidth: "550px",
@@ -96,7 +97,7 @@ export default function About() {
             <strong className="purple">Tools</strong> I use
           </Typography>
           <Toolstack />
-          <Github />
+          {/* <Github /> */}
         </Grid2>
       </Stack>
     </Container>

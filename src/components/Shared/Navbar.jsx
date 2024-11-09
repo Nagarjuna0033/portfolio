@@ -85,7 +85,7 @@ export default function Navbar({ mode, toggleColorMode }) {
               <Link to="/portfolio/About">
                 <Button sx={styleLinks}>About</Button>
               </Link>
-              <Link to="/portfolio/About">
+              <Link to="/portfolio/Projects">
                 <Button sx={styleLinks}>Projects</Button>
               </Link>
               <Link to="/portfolio/Resume">

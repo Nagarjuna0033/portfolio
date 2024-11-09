@@ -6,6 +6,7 @@ import {
   SiPostman,
   SiSlack,
   SiWindows,
+  SiAndroidstudio,
 } from "react-icons/si";
 
 export default function Toolstack() {
@@ -35,6 +36,10 @@ export default function Toolstack() {
           {
             icon: <SiPostman size="3rem" />,
             label: "Postman",
+          },
+          {
+            icon: <SiAndroidstudio size="3rem" />,
+            label: "Androi Studio",
           },
           { icon: <SiSlack size="3rem" />, label: "Slack" },
         ].map(({ icon, label }, index) => (
