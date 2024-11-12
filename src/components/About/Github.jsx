@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
-import GitHubCalendar from "react-github-calendar";
+// import GitHubCalendar from "react-github-calendar";
 import { GithubContributions } from "react-github-graph";
 
 export default function Github() {

@@ -4,7 +4,7 @@ import Techstack from "./TechStack";
 import AboutCard from "./AboutCard";
 import Toolstack from "./ToolStack";
 import laptop from "../assets/laptop_asset.png";
-import Github from "./Github";
+// import Github from "./Github";
 export default function About() {
   return (
     <Container
